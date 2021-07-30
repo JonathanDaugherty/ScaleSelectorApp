@@ -24,13 +24,5 @@ namespace ScaleSelectorApp.Controllers
             return View(); 
         } 
 
-        public static string RandomKey(int textLength)
-        {
-            string[] keys = { "A", "A#", "Bb", "B", "C", "C#", "Db", "D", "D#", "Eb", "E", "F", "F#", "Gb", "G", "G#", "Ab" };
-            Random r = new Random();
-            int index = r.Next(keys.Length);
-
-            return keys[index];
-        }
     }
 }

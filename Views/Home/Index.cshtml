@@ -1,9 +1,35 @@
 ﻿<body style="background-color:black; color:darkseagreen">
-<h1>Scale Selector App</h1>
-
+    <h1>Scale Selector</h1>
     <div>
-        <input type="button"
-               value="What Key?"
-               onclick="RandomKey()" />
+        <h5>What Key?</h5>
+        <h4 id="key"></h4> 
+        <h5>What Sonority?</h5>
+        <h4 id="son"></h4>
     </div>
+
+
+
+
 </body>
+<script>
+    document.getElementById('key').innerHTML = create_random_string(1)
+    console.log(create_random_string(1))
+
+    function create_random_string(string_length) {
+        var randKeys = '';
+        const keys = ["A", "B", "C", "D", "E", "F", "G", "Bb", "Ab", "A#", "C#", "Db", "D#", "Eb", "F#", "Gb", "G#"]
+        var randKeys = keys[Math.floor(Math.random() * keys.length)];
+        return randKeys;
+    }
+</script>
+<script>
+    document.getElementById('son').innerHTML = create_random_sonority(1)
+    console.log(create_random_sonority(1))
+
+    function create_random_sonority(string_length) {
+        var randSon = '';
+        const son = ["Major", "Natural Minor", "Melodic Minor", "Harmonic Minor"]
+        var randSon = son[Math.floor(Math.random() * son.length)];
+        return randSon;
+    }
+</script>
